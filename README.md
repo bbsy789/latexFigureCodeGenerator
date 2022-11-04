@@ -6,6 +6,7 @@ latexFigureCodeGenertor是一个生成latex code的生成器。
 # How to use?
 ## Windows:
 直接下载编译好的程序，在终端下运行即可。
+如果windows版本过低，可以自行编译。
 
 ## Linux:
 ```git clone https://github.com/bbsy789/latexFigureCodeGenerator.git```
