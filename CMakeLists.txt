@@ -17,8 +17,8 @@ set (CMAKE_CXX_FLAGS "-fmodules-ts -Ofast -flto -march=native -fno-exceptions -f
 project(latexFigureCodeGenerator LANGUAGES CXX)
 
 set (src latexFigureCodeGenerator/main.cpp)
-set (src latexFigureCodeGenerator/latexfigurehelper.cpp)
+set (src ${src} latexFigureCodeGenerator/latexfigurehelper.cpp)
 
-ADD_EXECUTABLE(latexFigureCodeGenerator src)
+ADD_EXECUTABLE(latexFigureCodeGenerator ${src})
 
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)

@@ -1,3 +1,12 @@
+#include <latexfigurehelper.h>
+
+using std::string;
+using std::string_view;
+using std::cout;
+using std::fixed;
+using std::setprecision;
+using std::ofstream;
+
 class LatexFigureHelper
 {
 	
@@ -67,9 +76,9 @@ private:
 
 bool LatexFigureHelper::print()
 {
-	std::ofstream out("out.tex");
-	std::string index;
-	std::string includegraphics;
+	ofstream out("out.tex");
+	string index;
+	string includegraphics;
 	const int totalRowN = (size / numberPerRow) + 1;
 
 	out << begin_figure << tab << setCentering << enter;
