@@ -25,8 +25,6 @@ private:
 	std::string name{};
 	std::string format{};
 	std::string path{};
-	int size{};
-	int numberPerRow{};
 	std::string tab;
 	std::string enter;
 	std::string begin_figure;
@@ -39,4 +37,7 @@ private:
 	std::string end_minipage;
 	std::string end_subfigure;
 	std::string end_figure;
+	int size{};
+	int numberPerRow{};
+	
 };

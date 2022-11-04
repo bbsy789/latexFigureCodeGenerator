@@ -17,11 +17,9 @@ project(latexFigureCodeGenerator LANGUAGES CXX)
 
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
 
-set (inc include/latexfigurehelper.h)
-
 set (src src/main.cpp)
 set (src ${src} src/latexfigurehelper.cpp)
 
-ADD_EXECUTABLE(latexFigureCodeGenerator ${inc} ${src})
+ADD_EXECUTABLE(latexFigureCodeGenerator ${src})
 
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
