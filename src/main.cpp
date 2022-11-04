@@ -1,5 +1,7 @@
-import latexfigurehelper;
-import std.core;
+#include <latexfigurehelper.h>
+#include <iostream>
+#include <string>
+
 auto main() -> int
 {
 	using std::cout;
