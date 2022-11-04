@@ -2,6 +2,17 @@
 latexFigureCodeGenertor是一个生成latex code的生成器。
 它的主要目的是用于节省时间。在Paraview的Save annimation功能会产生大量的图片，并且这些图片是有固定编号的，因此可以编写一个生成器来产生latex代码。
 请使用VS2022进行编译，C++标准为lastest，启用实验性的模块。
+
+# How to use?
+## Windows:
+直接下载编译好的程序，在终端下运行即可。
+
+## Linux:
+git clone 
+cd 
+cmake -S . -B build
+cmake --build build
+可执行文件会生成在项目根目录的bin文件夹下。
 # 样例输入：
 ## 文件名: d
 ## 文件格式：jpeg
