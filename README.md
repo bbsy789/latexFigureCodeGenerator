@@ -9,11 +9,15 @@ latexFigureCodeGenertor是一个生成latex code的生成器。
 
 ## Linux:
 ```git clone https://github.com/bbsy789/latexFigureCodeGenerator.git```
+
 ```cd latexFigureCodeGenerator```
+
 ```cmake -S . -B build```
+
 ```cmake --build build```
 
 可执行文件会生成在项目根目录的bin文件夹下。
+
 ./bin/latexFigureCodeGenerator
 
 # 样例输入：
