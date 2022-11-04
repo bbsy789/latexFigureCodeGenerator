@@ -1,63 +1,13 @@
 #include "latexfigurehelper.h"
+#include <iostream>
+#include <iomanip>
+#include <string>
 
 using std::string;
 using std::cout;
 using std::fixed;
 using std::setprecision;
 using std::ofstream;
-
-class LatexFigureHelper
-{
-public:
-	LatexFigureHelper(const string& other_name, const string& other_format, const int& other_size, const string& other_path, const int& other_numberPerRow)
-		:name(other_name), size(other_size), path(other_path), format(other_format), numberPerRow(other_numberPerRow)
-	{
-		label = "fig:" + name;
-		caption = label;
-	}
-	bool print();
-
-	void setNumberPerRow(int&& intput_numberPerRow)
-	{
-		numberPerRow = intput_numberPerRow;
-	}
-
-	void setLabel(string& input_label)
-	{
-		label = input_label;
-	}
-
-
-	void setCaption(string& input_caption)
-	{
-		caption = input_caption;
-	}
-
-	void setName(string& other_name)
-	{
-		name = other_name;
-	}
-private:
-	string caption{};
-	string label{};
-	string name{};
-	string format{};
-	string path{};
-	int size{};
-	int numberPerRow{};
-	std::string tab = "	";
-	std::string enter = "\n";
-	std::string begin_figure = "\\begin{figure*}[htbp]\{\n";
-	std::string setCentering = "\\centering\n";
-	std::string begin_subfigure = "\\subfigure{\n";
-	std::string begin_minipage_head = "\\begin{minipage}[t]{";
-	std::string begin_minipage_trail = "\\linewidth }\n"	;
-	std::string includegraphics_head = "\\includegraphics[width=1\\linewidth]{";
-	std::string includegraphics_trail = "}\n";
-	std::string end_minipage = "\\end{minipage}\n";
-	std::string end_subfigure = "}\n";
-	std::string end_figure = "}\n\\end{figure*}\n";
-};
 
 bool LatexFigureHelper::print()
 {
