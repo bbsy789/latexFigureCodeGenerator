@@ -8,7 +8,6 @@ using std::ofstream;
 
 class LatexFigureHelper
 {
-	
 public:
 	LatexFigureHelper(const string& other_name, const string& other_format, const int& other_size, const string& other_path, const int& other_numberPerRow)
 		:name(other_name), size(other_size), path(other_path), format(other_format), numberPerRow(other_numberPerRow)
@@ -38,18 +37,6 @@ public:
 	{
 		name = other_name;
 	}
-	const string tab = "	";
-	const string enter = "\n";
-	const string begin_figure = "\\begin{figure*}[htbp]\{\n";
-	const string setCentering = "\\centering\n";
-	const string begin_subfigure = "\\subfigure{\n";
-	const string begin_minipage_head = "\\begin{minipage}[t]{";
-	const string begin_minipage_trail = "\\linewidth }\n"	;
-	const string includegraphics_head = "\\includegraphics[width=1\\linewidth]{";
-	const string includegraphics_trail = "}\n";
-	const string end_minipage = "\\end{minipage}\n";
-	const string end_subfigure = "}\n";
-	const string end_figure = "}\n\\end{figure*}\n";
 private:
 	string caption{};
 	string label{};

@@ -1,5 +1,5 @@
-#pragma once
-
+#ifndef LATEXFIGUREHELPER_H
+#define LATEXFIGUREHELPER_H
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -18,18 +18,18 @@ public:
 	void setCaption(std::string& input_caption);
 
 	void setName(std::string& other_name);
-    const std::string tab;
-	const std::string enter;
-	const std::string begin_figure;
-	const std::string setCentering;
-	const std::string begin_subfigure;
-	const std::string begin_minipage_head;
-	const std::string begin_minipage_trail;
-	const std::string includegraphics_head;
-	const std::string includegraphics_trail;
-	const std::string end_minipage;
-	const std::string end_subfigure;
-	const std::string end_figure;
+    const std::string tab = "	";
+	const std::string enter = "\n";
+	const std::string begin_figure = "\\begin{figure*}[htbp]\{\n";
+	const std::string setCentering = "\\centering\n";
+	const std::string begin_subfigure = "\\subfigure{\n";
+	const std::string begin_minipage_head = "\\begin{minipage}[t]{";
+	const std::string begin_minipage_trail = "\\linewidth }\n"	;
+	const std::string includegraphics_head = "\\includegraphics[width=1\\linewidth]{";
+	const std::string includegraphics_trail = "}\n";
+	const std::string end_minipage = "\\end{minipage}\n";
+	const std::string end_subfigure = "}\n";
+	const std::string end_figure = "}\n\\end{figure*}\n";
 private:
     std::string caption{};
 	std::string label{};
@@ -39,3 +39,4 @@ private:
 	int size{};
 	int numberPerRow{};
 };
+#endif
