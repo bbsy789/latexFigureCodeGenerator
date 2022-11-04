@@ -1,7 +1,6 @@
 #include <latexfigurehelper.h>
 
 using std::string;
-using std::string_view;
 using std::cout;
 using std::fixed;
 using std::setprecision;
@@ -29,26 +28,13 @@ public:
 		label = input_label;
 	}
 
-	void setLabel(string_view& input_label)
-	{
-		label = input_label;
-	}
 
 	void setCaption(string& input_caption)
 	{
 		caption = input_caption;
 	}
 
-	void setCaption(string_view& input_caption)
-	{
-		caption = input_caption;
-	}
-
 	void setName(string& other_name)
-	{
-		name = other_name;
-	}
-	void setName(string_view& other_name)
 	{
 		name = other_name;
 	}
