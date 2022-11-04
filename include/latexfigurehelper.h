@@ -6,7 +6,7 @@
 class LatexFigureHelper
 {
 public:
-	LatexFigureHelper(const string& other_name, const string& other_format, const int& other_size, const string& other_path, const int& other_numberPerRow)
+	LatexFigureHelper(const std::string& other_name, const std::string& other_format, const int& other_size, const std::string& other_path, const int& other_numberPerRow)
 		:name(other_name), size(other_size), path(other_path), format(other_format), numberPerRow(other_numberPerRow)
 	{
 		label = "fig:" + name;
@@ -19,27 +19,27 @@ public:
 		numberPerRow = intput_numberPerRow;
 	}
 
-	void setLabel(string& input_label)
+	void setLabel(std::string& input_label)
 	{
 		label = input_label;
 	}
 
 
-	void setCaption(string& input_caption)
+	void setCaption(std::string& input_caption)
 	{
 		caption = input_caption;
 	}
 
-	void setName(string& other_name)
+	void setName(std::string& other_name)
 	{
 		name = other_name;
 	}
 private:
-	string caption{};
-	string label{};
-	string name{};
-	string format{};
-	string path{};
+	std::string caption{};
+	std::string label{};
+	std::string name{};
+	std::string format{};
+	std::string path{};
 	int size{};
 	int numberPerRow{};
 	const std::string tab = "	";
