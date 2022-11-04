@@ -7,7 +7,7 @@ auto main() -> int
 	using std::string;
 	string name{},format{},path{};
 	int size{},numberPerRow{};
-	cout << "这个小程序用于生成Latex多图片代码\n";
+	cout << "这个小程序用于生成Latex多图片代码 ";
 	cout << "作者：bbsy789\n";
 	cout << "请输入图片文件名:\n";
 	cin >> name;

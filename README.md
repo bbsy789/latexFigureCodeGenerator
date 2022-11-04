@@ -70,3 +70,8 @@ latexFigureCodeGenertor是一个生成latex code的生成器。
 }
 \end{figure*}
 ```
+
+Q:控制台运行中出现乱码？
+A:Windows下终端默认是采用系统设置，而windows系统默认的编码是GBK。需要使用
+``` chcp 65001 ```
+切换终端编码为UTF-8。
