@@ -15,6 +15,8 @@ set (CMAKE_CXX_FLAGS "-Ofast -flto -march=native -fno-exceptions -fno-rtti -fno-
 
 project(latexFigureCodeGenerator LANGUAGES CXX)
 
+INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
+
 set (inc include/latexfigurehelper.h)
 
 set (src src/main.cpp)
