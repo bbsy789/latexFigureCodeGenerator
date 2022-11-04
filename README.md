@@ -22,9 +22,9 @@ latexFigureCodeGenertor是一个生成latex code的生成器。
 ./bin/latexFigureCodeGenerator
 
 # 样例输入：
-## 文件名: d
+## 文件名: image
 ## 文件格式：jpeg
-## 你存放的图片相对latex文件夹根目录的路径: img/d/
+## 你存放的图片相对latex文件夹根目录的路径: img/
 ## 图片结束的数字：9
 ## 每行的图片数量：5
 
