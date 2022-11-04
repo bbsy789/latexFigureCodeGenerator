@@ -73,11 +73,13 @@ latexFigureCodeGenertor是一个生成latex code的生成器。
 
 # Q:
 1.控制台运行中出现乱码？
+
 2.latex编译错误？
 # A:
 1.Windows下终端默认是采用系统设置，而windows系统默认的编码是GBK。需要使用
 ``` chcp 65001 ```
 切换终端编码为UTF-8。
+
 2.可能是没有引入宏包：
 ``` latex
 \usepackage{subfigure}
