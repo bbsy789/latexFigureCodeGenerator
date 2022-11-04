@@ -1,5 +1,5 @@
-#ifndef LATEXFIGUREHELPER_H
-#define LATEXFIGUREHELPER_H
+#pragma once
+
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -18,18 +18,7 @@ public:
 	void setCaption(std::string& input_caption);
 
 	void setName(std::string& other_name);
-    const std::string tab = "	";
-	const std::string enter = "\n";
-	const std::string begin_figure = "\\begin{figure*}[htbp]\{\n";
-	const std::string setCentering = "\\centering\n";
-	const std::string begin_subfigure = "\\subfigure{\n";
-	const std::string begin_minipage_head = "\\begin{minipage}[t]{";
-	const std::string begin_minipage_trail = "\\linewidth }\n"	;
-	const std::string includegraphics_head = "\\includegraphics[width=1\\linewidth]{";
-	const std::string includegraphics_trail = "}\n";
-	const std::string end_minipage = "\\end{minipage}\n";
-	const std::string end_subfigure = "}\n";
-	const std::string end_figure = "}\n\\end{figure*}\n";
+    
 private:
     std::string caption{};
 	std::string label{};
@@ -38,5 +27,16 @@ private:
 	std::string path{};
 	int size{};
 	int numberPerRow{};
+	std::string tab;
+	std::string enter;
+	std::string begin_figure;
+	std::string setCentering;
+	std::string begin_subfigure;
+	std::string begin_minipage_head ;
+	std::string begin_minipage_trail;
+	std::string includegraphics_head;
+	std::string includegraphics_trail;
+	std::string end_minipage;
+	std::string end_subfigure;
+	std::string end_figure;
 };
-#endif

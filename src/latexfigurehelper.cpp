@@ -1,4 +1,4 @@
-#include <latexfigurehelper.h>
+#include "latexfigurehelper.h"
 
 using std::string;
 using std::cout;
@@ -45,6 +45,18 @@ private:
 	string path{};
 	int size{};
 	int numberPerRow{};
+	std::string tab = "	";
+	std::string enter = "\n";
+	std::string begin_figure = "\\begin{figure*}[htbp]\{\n";
+	std::string setCentering = "\\centering\n";
+	std::string begin_subfigure = "\\subfigure{\n";
+	std::string begin_minipage_head = "\\begin{minipage}[t]{";
+	std::string begin_minipage_trail = "\\linewidth }\n"	;
+	std::string includegraphics_head = "\\includegraphics[width=1\\linewidth]{";
+	std::string includegraphics_trail = "}\n";
+	std::string end_minipage = "\\end{minipage}\n";
+	std::string end_subfigure = "}\n";
+	std::string end_figure = "}\n\\end{figure*}\n";
 };
 
 bool LatexFigureHelper::print()
