@@ -15,7 +15,7 @@ class LatexFigureHelper
 {
 	
 public:
-	LatexFigureHelper(const string& other_name, const string& other_format, const int& other_size, const string& other_path, const int& other_numberPerRow)
+	LatexFigureHelper(const string& other_name, const string& other_format, const uint32_t& other_size, const string& other_path, const uint32_t& other_numberPerRow)
 		:name(other_name), size(other_size), path(other_path), format(other_format), numberPerRow(other_numberPerRow)
 	{
 		label = "fig:" + name;
@@ -23,7 +23,7 @@ public:
 	}
 	bool print();
 
-	void setNumberPerRow(int&& intput_numberPerRow)
+	void setNumberPerRow(uint32_t&& intput_numberPerRow)
 	{
 		numberPerRow = intput_numberPerRow;
 	}
@@ -74,8 +74,8 @@ private:
 	string name{};
 	string format{};
 	string path{};
-	int size{};
-	int numberPerRow{};
+	uint32_t size{};
+	uint32_t numberPerRow{};
 };
 
 bool LatexFigureHelper::print()
@@ -83,7 +83,7 @@ bool LatexFigureHelper::print()
 	std::ofstream out("out.tex");
 	std::string index;
 	std::string includegraphics;
-	const int totalRowN = (size / numberPerRow) + 1;
+	const uint32_t totalRowN = (size / numberPerRow) + 1;
 
 	out << begin_figure << tab << setCentering << enter;
 	
