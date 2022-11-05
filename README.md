@@ -2,10 +2,29 @@
 latexFigureCodeGenertor是一个生成latex code的生成器。
 它的主要目的是用于节省时间。在Paraview的Save annimation功能会产生大量的图片，并且这些图片是有固定编号的，因此可以编写一个生成器来产生latex代码。
 请使用VS2022进行编译，C++标准为lastest，启用实验性的模块。
+
+# How to use?
+## Windows:
+直接下载编译好的程序，在终端下运行即可。
+如果windows版本过低，可以自行编译。
+
+## Linux:
+```git clone https://github.com/bbsy789/latexFigureCodeGenerator.git```
+
+```cd latexFigureCodeGenerator```
+
+```cmake -S . -B build```
+
+```cmake --build build```
+
+可执行文件会生成在项目根目录的bin文件夹下。
+
+./bin/latexFigureCodeGenerator
+
 # 样例输入：
-## 文件名: d
+## 文件名: image
 ## 文件格式：jpeg
-## 你存放的图片相对latex文件夹根目录的路径: img/d/
+## 你存放的图片相对latex文件夹根目录的路径: img/
 ## 图片结束的数字：9
 ## 每行的图片数量：5
 
@@ -76,7 +95,7 @@ latexFigureCodeGenertor是一个生成latex code的生成器。
 
 2.latex编译错误？
 # A:
-1.Windows下终端默认是采用系统设置，而windows系统默认的编码是GBK。需要使用
+1.Windows下终端默认是采用系统设置，而Windows系统默认的编码是GBK。需要使用
 ``` chcp 65001 ```
 切换终端编码为UTF-8。
 
