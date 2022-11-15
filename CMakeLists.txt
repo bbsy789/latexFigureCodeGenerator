@@ -10,9 +10,9 @@ set (CMAKE_BUILD_TYPE "Release")
 set (CMAKE_CXX_STANDARD_REQUIRED ON)
 set (CMAKE_CXX_STANDARD 17)
 
-
-set (CMAKE_CXX_FLAGS "-Ofast -flto -march=native -fno-exceptions -fno-rtti -fno-ident -fno-unwind-tables -fno-omit-frame-pointer")
-
+if(UNIX)
+	set (CMAKE_CXX_FLAGS "-Ofast -flto -march=native -fno-exceptions -fno-rtti -fno-ident -fno-unwind-tables -fno-omit-frame-pointer")
+endif()
 project(latexFigureCodeGenerator LANGUAGES CXX)
 
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
